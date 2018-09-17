@@ -43,35 +43,41 @@ begin
             r9 = a + b;
             co = r9[8];
             ov = ~a[7]&~b[7]&r9[7] | a[7]&b[7]&~r9[7];
-            /*if (1) begin
-            end else begin 
-            end*/
         end
         3'b001: begin
             // Subtraction
+            r9 = a - b;
+            co = r9[8];
+            ov = ~a[7]&b[7]&r9[7] | a[7]&~b[7]&~r9[7];
         end
         3'b010: begin
             //Transfer
-        
+            r9 = a;
+            co = r9[8];
         end
         3'b011: begin
             // Test
-        
+            r9 = (a == 0);
+            co = r9[8];
         end
         3'b100: begin
             // Bitwise AND
-        
+            r9 = a&b;
+            co = r9[8];
         end
         3'b101: begin
             // Bitwise OR
-            
+            r9 = a|b;
+            co = r9[8];
         end
         3'b110: begin
             // Bitwise XOR
-        
+            r9 = a^b;
+            co = r9[8];
         end
         3'b111: begin
             // Bitwise NOT
+            r9 = ~a;
         end
     endcase
 end
