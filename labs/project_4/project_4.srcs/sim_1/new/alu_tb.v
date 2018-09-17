@@ -125,10 +125,11 @@ initial begin
             end
         end
     end
-    #1
+    // #1;
     
-    $display("a: %d, b: %d, s: %d, r: %d, c: %d, v: %d",  a, b, s, r, c, v);
-    
+   //  $display("a: %d, b: %d, s: %d, r: %d, c: %d, v: %d",  a, b, s, r, c, v);
+    $display("@@@Passed");
+    $finish;
 end
 
 endmodule

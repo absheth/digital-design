@@ -20,7 +20,27 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top_tb(
+module top_tb;
+reg [15:0] sw;
+reg btnC;
+reg enable;
+wire [15:0] led;
 
-    );
+top top_testbench(  .sw(sw[15:0]),
+                    .btnC(btnC),
+                    .enable(enable),
+                    .led(led[15:0])
+                    );
+
+initial begin
+    enable = 0;
+    
+    
+    
+end
+
+always
+    #10
+    enable = !enable;
+    
 endmodule
