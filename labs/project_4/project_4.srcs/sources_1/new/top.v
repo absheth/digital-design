@@ -24,7 +24,7 @@
 module top(
     input    [15:0] sw,  //operands a,b,s
     input           btnC, // middle button
-    input           enable, // middle button
+    input           enable, // middle button  // CHANGE
     output   [15:0] led //results c,v
 );
 // wire enable, D;
@@ -36,7 +36,7 @@ wire co, ov;
 //D Flip Flop
 always @(posedge enable)
 begin
-    if (btnC) begin
+    if (btnC) begin    // Check by replacing btnC with enable
         Q <= sw[7:0];
         Qbar <= ~sw[7:0];
     end
