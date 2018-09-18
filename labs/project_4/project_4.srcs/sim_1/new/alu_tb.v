@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 09/16/2018 05:43:52 PM
+// Create Date: 09/18/2018 11:45:12 AM
 // Design Name: 
 // Module Name: alu_tb
 // Project Name: 
@@ -30,7 +30,7 @@ wire c;
 wire v;
 reg [8:0] temp;
 
-ALU alu (.a(a),
+alu alu_sub(.a(a),
          .b(b),
          .s(s),
          .r(r),
